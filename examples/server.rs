@@ -1,6 +1,6 @@
 use std::net::{IpAddr, Ipv4Addr};
 
-use defguard_wireguard_rs::{
+use xguard_wireguard_rs::{
     InterfaceConfiguration, WGApi, WireguardInterfaceApi, key::Key, net::IpAddrMask, peer::Peer,
 };
 use x25519_dalek::{EphemeralSecret, PublicKey};
@@ -17,9 +17,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     });
 
     #[cfg(not(target_os = "macos"))]
-    let mut wgapi = WGApi::<defguard_wireguard_rs::Kernel>::new(ifname.clone())?;
+    let mut wgapi = WGApi::<xguard_wireguard_rs::Kernel>::new(ifname.clone())?;
     #[cfg(target_os = "macos")]
-    let mut wgapi = WGApi::<defguard_wireguard_rs::Userspace>::new(ifname.clone())?;
+    let mut wgapi = WGApi::<xguard_wireguard_rs::Userspace>::new(ifname.clone())?;
 
     // create host interface
     wgapi.create_interface()?;

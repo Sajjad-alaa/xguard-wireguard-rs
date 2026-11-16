@@ -188,8 +188,8 @@ impl Host {
                         let peer = Peer::from_nlas(nla);
                         // On tunnels with a lot of routes, the peer info may be split across multiple
                         // entries. We need to merge them here.
-                        // https://github.com/DefGuard/client/issues/617
-                        // https://github.com/DefGuard/wireguard-rs/issues/101
+                        // https://github.com/Sajjad-alaa/xguard-client/issues/617
+                        // https://github.com/Sajjad-alaa/xguard-wireguard-rs/issues/101
                         if let Some(existing_peer) = self.peers.get_mut(&peer.public_key) {
                             existing_peer.rx_bytes += peer.rx_bytes;
                             existing_peer.tx_bytes += peer.tx_bytes;

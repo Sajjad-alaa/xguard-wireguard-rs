@@ -244,57 +244,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "defguard_boringtun"
-version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a575302d61f1019ba326452a03ca7df013187e5966214e244fdab4900127ca3"
-dependencies = [
- "aead",
- "base64",
- "blake2",
- "chacha20poly1305",
- "hex",
- "hmac",
- "ip_network",
- "ip_network_table",
- "libc",
- "nix",
- "parking_lot",
- "rand",
- "ring",
- "socket2",
- "thiserror 2.0.20",
- "tracing",
- "x25519-dalek",
-]
-
-[[package]]
-name = "defguard_wireguard_rs"
-version = "0.12.1"
-dependencies = [
- "base64",
- "defguard_boringtun",
- "env_logger",
- "ipnet",
- "libc",
- "log",
- "netlink-packet-core",
- "netlink-packet-generic",
- "netlink-packet-route",
- "netlink-packet-utils",
- "netlink-packet-wireguard",
- "netlink-sys",
- "serde",
- "serde_test",
- "thiserror 2.0.20",
- "tracing",
- "tracing-subscriber",
- "windows",
- "wireguard-nt",
- "x25519-dalek",
-]
-
-[[package]]
 name = "defmt"
 version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1295,6 +1244,56 @@ dependencies = [
  "getrandom 0.4.3",
  "rand_core",
  "zeroize",
+]
+
+[[package]]
+name = "xguard_boringtun"
+version = "0.7.0"
+source = "git+https://github.com/Sajjad-alaa/xguard-boringtun.git?rev=a5a68aef302219c3fa1fffb237bcce3297bab01c#a5a68aef302219c3fa1fffb237bcce3297bab01c"
+dependencies = [
+ "aead",
+ "base64",
+ "blake2",
+ "chacha20poly1305",
+ "hex",
+ "hmac",
+ "ip_network",
+ "ip_network_table",
+ "libc",
+ "nix",
+ "parking_lot",
+ "rand",
+ "ring",
+ "socket2",
+ "thiserror 2.0.20",
+ "tracing",
+ "x25519-dalek",
+]
+
+[[package]]
+name = "xguard_wireguard_rs"
+version = "0.12.1"
+dependencies = [
+ "base64",
+ "env_logger",
+ "ipnet",
+ "libc",
+ "log",
+ "netlink-packet-core",
+ "netlink-packet-generic",
+ "netlink-packet-route",
+ "netlink-packet-utils",
+ "netlink-packet-wireguard",
+ "netlink-sys",
+ "serde",
+ "serde_test",
+ "thiserror 2.0.20",
+ "tracing",
+ "tracing-subscriber",
+ "windows",
+ "wireguard-nt",
+ "x25519-dalek",
+ "xguard_boringtun",
 ]
 
 [[package]]
