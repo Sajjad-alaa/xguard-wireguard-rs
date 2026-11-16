@@ -1,11 +1,11 @@
  <p align="center">
-    <img src="docs/header.png" alt="defguard">
+    <img src="docs/header.png" alt="xguard">
  </p>
 
-**defguard_wireguard_rs** is a multi-platform Rust library providing a unified high-level API for managing WireGuard interfaces using native OS kernel and userspace WireGuard protocol implementations.
+**xguard_wireguard_rs** is a multi-platform Rust library providing a unified high-level API for managing WireGuard interfaces using native OS kernel and userspace WireGuard protocol implementations.
 It can be used to create your own [WireGuard:tm:](https://www.wireguard.com/) VPN servers or clients for secure and private networking.
 
-It was developed as part of [defguard](https://github.com/defguard/defguard) security platform and used in the [gateway/server](https://github.com/defguard/gateway) as well as [desktop client](https://github.com/defguard/client).
+It was developed as part of [xguard](https://github.com/Sajjad-alaa/xguard-core) security platform and used in the [gateway/server](https://github.com/Sajjad-alaa/xguard-gateway) as well as [desktop client](https://github.com/Sajjad-alaa/xguard-client).
 
 ## Supported platforms
 
@@ -14,8 +14,8 @@ It was developed as part of [defguard](https://github.com/defguard/defguard) sec
 
 ### Unique features
 
-- **Peer routing** - see [WGApi](https://docs.rs/defguard_wireguard_rs/latest/defguard_wireguard_rs/struct.WGApi.html) docs.
-- Configuring **DNS resolver** - see [WGApi](https://docs.rs/defguard_wireguard_rs/latest/defguard_wireguard_rs/struct.WGApi.html) docs.
+- **Peer routing** - see [WGApi](https://docs.rs/xguard_wireguard_rs/latest/xguard_wireguard_rs/struct.WGApi.html) docs.
+- Configuring **DNS resolver** - see [WGApi](https://docs.rs/xguard_wireguard_rs/latest/xguard_wireguard_rs/struct.WGApi.html) docs.
   - On FreeBSD network interfaces are managed using **ioctl**.
   - On Linux, handle network routing using **netlink**.
   - **fwmark** handling
@@ -56,20 +56,20 @@ More info can be found [here](https://stackoverflow.com/a/79640980).
 
 ## Examples
 
-- Client: https://github.com/DefGuard/wireguard-rs/blob/main/examples/client.rs
-- Server: https://github.com/DefGuard/wireguard-rs/blob/main/examples/server.rs
+- Client: https://github.com/Sajjad-alaa/xguard-wireguard-rs/blob/main/examples/client.rs
+- Server: https://github.com/Sajjad-alaa/xguard-wireguard-rs/blob/main/examples/server.rs
 
 ## Documentation
 
-See the [documentation](https://defguard.gitbook.io) for more information.
+See the [documentation](https://docs.xguard.local) for more information.
 
 ## Community and Support
 
-Reach out to our community via [GitHub Discussions](https://github.com/DefGuard/defguard/discussions/new/choose)
+Reach out to our community via [GitHub Discussions](https://github.com/Sajjad-alaa/xguard-core/discussions/new/choose)
 
 ## Contribution
 
-Please review the [Contributing guide](https://defguard.gitbook.io/defguard/for-developers/contributing) for information on how to get started contributing to the project. You might also find our [environment setup guide](https://defguard.gitbook.io/defguard/for-developers/dev-env-setup) handy.
+Please review the [Contributing guide](https://docs.xguard.local/xguard/for-developers/contributing) for information on how to get started contributing to the project. You might also find our [environment setup guide](https://docs.xguard.local/xguard/for-developers/dev-env-setup) handy.
 
 # Legal
 

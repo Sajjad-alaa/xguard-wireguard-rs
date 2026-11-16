@@ -23,7 +23,7 @@ pub(crate) const MAX_NAMESPACES_PER_RULE: usize = 50;
 /// Rule keys are named after the interface they belong to, which makes it possible to replace or
 /// remove exactly the rules of one interface, and to recognize the ones left behind by a process
 /// which did not get to clean up after itself.
-const RULE_KEY_PREFIX: &str = "defguard-wireguard-";
+const RULE_KEY_PREFIX: &str = "xguard-wireguard-";
 
 /// Normalizes a domain into an NRPT namespace, returning `None` for an empty one.
 pub(crate) fn namespace(domain: &str) -> Option<String> {

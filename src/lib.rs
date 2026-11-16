@@ -1,18 +1,18 @@
-//! # `defguard_wireguard_rs`
+//! # `xguard_wireguard_rs`
 //!
-//! `defguard_wireguard_rs` is a multi-platform Rust library providing a unified high-level API
+//! `xguard_wireguard_rs` is a multi-platform Rust library providing a unified high-level API
 //! for managing WireGuard interfaces using native OS kernel and userspace WireGuard protocol implementations.
 //!
 //! It can be used to create your own [WireGuard:tm:](https://www.wireguard.com/) VPN servers or clients for secure and private networking.
 //!
-//! It was developed as part of [defguard](https://github.com/defguard/defguard) security platform and used in the [gateway/server](https://github.com/defguard/gateway) as well as [desktop client](https://github.com/defguard/client).
+//! It was developed as part of [xguard](https://github.com/Sajjad-alaa/xguard-core) security platform and used in the [gateway/server](https://github.com/Sajjad-alaa/xguard-gateway) as well as [desktop client](https://github.com/Sajjad-alaa/xguard-client).
 //!
 //! ## Example
 //!
 //! ```no_run
 //! use x25519_dalek::{EphemeralSecret, PublicKey};
-//! use defguard_wireguard_rs::{InterfaceConfiguration, Userspace, WGApi, WireguardInterfaceApi, peer::Peer};
-//! # use defguard_wireguard_rs::error::WireguardInterfaceError;
+//! use xguard_wireguard_rs::{InterfaceConfiguration, Userspace, WGApi, WireguardInterfaceApi, peer::Peer};
+//! # use xguard_wireguard_rs::error::WireguardInterfaceError;
 //!
 //! // Create new API struct for interface
 //! let ifname: String = if cfg!(target_os = "linux") || cfg!(target_os = "freebsd") {

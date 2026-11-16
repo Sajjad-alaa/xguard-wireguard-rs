@@ -6,7 +6,7 @@ use std::{
     time::Duration,
 };
 
-use defguard_boringtun::device::{DeviceConfig, DeviceHandle};
+use xguard_boringtun::device::{DeviceConfig, DeviceHandle};
 
 #[cfg(any(target_os = "freebsd", target_os = "macos", target_os = "netbsd"))]
 use crate::bsd;

@@ -50,7 +50,7 @@ use crate::{check_command_output_status, utils::get_command_path};
 ///
 /// ```
 /// # use std::net::IpAddr;
-/// # use defguard_wireguard_rs::dns::DnsConfig;
+/// # use xguard_wireguard_rs::dns::DnsConfig;
 /// let servers = ["10.0.0.1".parse::<IpAddr>().unwrap()];
 /// let config = DnsConfig::full_tunnel(&servers);
 /// ```
@@ -60,7 +60,7 @@ use crate::{check_command_output_status, utils::get_command_path};
 ///
 /// ```
 /// # use std::net::IpAddr;
-/// # use defguard_wireguard_rs::dns::DnsConfig;
+/// # use xguard_wireguard_rs::dns::DnsConfig;
 /// let servers = ["10.0.0.1".parse::<IpAddr>().unwrap()];
 /// let config = DnsConfig::split_dns(&servers, &["corp.example.com"], &["10.in-addr.arpa"]);
 /// ```

@@ -8,7 +8,7 @@ use std::{
 };
 
 #[cfg(unix)]
-use defguard_boringtun::device::DeviceHandle;
+use xguard_boringtun::device::DeviceHandle;
 #[cfg(target_os = "windows")]
 use wireguard_nt::Adapter;
 

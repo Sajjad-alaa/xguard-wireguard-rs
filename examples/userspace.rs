@@ -4,7 +4,7 @@ use std::{
     str::FromStr,
 };
 
-use defguard_wireguard_rs::{
+use xguard_wireguard_rs::{
     InterfaceConfiguration, Userspace, WGApi, WireguardInterfaceApi, key::Key, net::IpAddrMask,
     peer::Peer,
 };

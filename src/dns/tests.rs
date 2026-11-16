@@ -219,7 +219,7 @@ fn nrpt_rule_keys_name_the_interface_they_belong_to() {
     let key = nrpt::rule_key_name("A1B2C3D4-0000-0000-0000-000000000000", 2);
     assert_eq!(
         key,
-        "defguard-wireguard-A1B2C3D4-0000-0000-0000-000000000000-2"
+        "xguard-wireguard-A1B2C3D4-0000-0000-0000-000000000000-2"
     );
     assert_eq!(
         nrpt::rule_key_interface_id(&key),
@@ -227,7 +227,7 @@ fn nrpt_rule_keys_name_the_interface_they_belong_to() {
     );
     // Registry key names are case insensitive.
     assert_eq!(
-        nrpt::rule_key_interface_id("DEFGUARD-WIREGUARD-abc-0"),
+        nrpt::rule_key_interface_id("XGUARD-WIREGUARD-abc-0"),
         Some("abc")
     );
 }
@@ -235,15 +235,15 @@ fn nrpt_rule_keys_name_the_interface_they_belong_to() {
 #[test]
 fn rules_of_other_software_are_not_recognized_as_ours() {
     assert_eq!(nrpt::rule_key_interface_id("{some-other-rule}"), None);
-    assert_eq!(nrpt::rule_key_interface_id("defguard-wireguard-"), None);
+    assert_eq!(nrpt::rule_key_interface_id("xguard-wireguard-"), None);
     // No trailing rule index.
-    assert_eq!(nrpt::rule_key_interface_id("defguard-wireguard-abc"), None);
+    assert_eq!(nrpt::rule_key_interface_id("xguard-wireguard-abc"), None);
     assert_eq!(
-        nrpt::rule_key_interface_id("defguard-wireguard-abc-notanindex"),
+        nrpt::rule_key_interface_id("xguard-wireguard-abc-notanindex"),
         None
     );
     // Shorter than the prefix, and not a char boundary panic either.
-    assert_eq!(nrpt::rule_key_interface_id("defguard"), None);
+    assert_eq!(nrpt::rule_key_interface_id("xguard"), None);
     assert_eq!(nrpt::rule_key_interface_id("ł"), None);
 }
 
